@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Team Task Manager</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Team Task Manager</h1>
+      <div id="user-panel" class="hidden">
+        <span id="user-info"></span>
+        <button id="logoutBtn" class="button secondary">Logout</button>
+      </div>
+    </header>
+
+    <main>
+      <section id="auth-section">
+        <div class="card auth-card">
+          <h2>Login</h2>
+          <input id="loginEmail" type="email" placeholder="Email" />
+          <input id="loginPassword" type="password" placeholder="Password" />
+          <button id="loginBtn" class="button">Login</button>
+        </div>
+
+        <div class="card auth-card">
+          <h2>Signup</h2>
+          <input id="signupName" type="text" placeholder="Name" />
+          <input id="signupEmail" type="email" placeholder="Email" />
+          <input id="signupPassword" type="password" placeholder="Password" />
+          <select id="signupRole">
+            <option value="member">Member</option>
+            <option value="admin">Admin</option>
+          </select>
+          <button id="signupBtn" class="button secondary">Create Account</button>
+        </div>
+      </section>
+
+      <section id="app-section" class="hidden">
+        <div class="grid">
+          <div class="card">
+            <h2>Dashboard</h2>
+            <div class="stats">
+              <div><strong>Projects</strong><p id="projectCount">0</p></div>
+              <div><strong>Tasks</strong><p id="totalTasks">0</p></div>
+              <div><strong>Todo</strong><p id="todoCount">0</p></div>
+              <div><strong>In Progress</strong><p id="inProgressCount">0</p></div>
+              <div><strong>Done</strong><p id="doneCount">0</p></div>
+              <div><strong>Overdue</strong><p id="overdueCount">0</p></div>
+            </div>
+          </div>
+
+          <div class="card">
+            <h2>Create Project</h2>
+            <input id="projectName" type="text" placeholder="Project name" />
+            <input id="projectDescription" type="text" placeholder="Description" />
+            <button id="createProjectBtn" class="button">Create Project</button>
+          </div>
+
+          <div class="card">
+            <h2>Create Task</h2>
+            <select id="projectSelect"></select>
+            <input id="taskTitle" type="text" placeholder="Task title" />
+            <input id="taskDescription" type="text" placeholder="Description" />
+            <input id="taskDueDate" type="date" />
+            <button id="createTaskBtn" class="button">Create Task</button>
+          </div>
+        </div>
+
+        <div class="card project-list">
+          <h2>Projects</h2>
+          <div id="projectsContainer"></div>
+        </div>
+
+        <div class="card task-list">
+          <h2>Tasks</h2>
+          <div id="tasksContainer"></div>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
