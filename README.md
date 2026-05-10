@@ -30,6 +30,16 @@ A full-stack task management application with role-based access control for Admi
    ```
 4. Open `http://localhost:4000`
 
+## Live Link
+
+🚀 **Deployed on Railway**: [https://task-manager-production-d6df.up.railway.app](https://task-manager-production-d6df.up.railway.app)
+
 ## Deployment
 
 Deploy the app to Railway by connecting the repository and setting the environment variables above.
+
+### Railway Deployment Steps
+1. Connect your GitHub repository to Railway
+2. Add environment variables: `MONGODB_URI` and `JWT_SECRET`
+3. Deploy the service
+4. Generate a domain from Networking settings in Service settings
